@@ -8,4 +8,21 @@
 - *Paso 6 Descargar Modelos*:ollama pull tinyollama
 - *Pregunta lo que quieras*: ollama run tinyllama [pregunta]
 - *Activa modo chat*: ollama run 
-
+## Consultas mediante api:tinyllama 
+```
+curl http://localhost:11434/api/generate -d '{
+  "model": "tinyllama",
+  "prompt":"Por que el cielo es azul?",
+  "system":"Responde con 5 palabras y como vegeta",
+  "stream": false
+}'
+```
+### llama2
+```
+curl http://localhost:11434/api/generate -d '{
+  "model": "llama2",
+  "prompt":"Por que el cielo es azul?",
+  "system":"Responde con 5 palabras y como vegeta",
+  "stream": false
+}'
+```
