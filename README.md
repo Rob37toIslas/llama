@@ -26,3 +26,6 @@ curl http://localhost:11434/api/generate -d '{
   "stream": false
 }'
 ```
+### Modelos 
+- crear modelo: ollama create [nombre_de_modelo] -f ./Modelfile
+- Eliminar Modelo: ollama rm [nombre_de_modelo]
