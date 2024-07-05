@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+#navbar {
+    background: linear-gradient(to right,#b525b5c2,#3e95bd); /* Degradado de colores */
+    padding: 10px 20px; /* Espaciado interno */
+    color: white; /* Color del texto */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+}
+#navbar ul {
+    list-style-type: none; /* Quita viñetas de la lista */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+#navbar ul li {
+    float: left; /* Alinea elementos a la izquierda */
+}
+#navbar ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: bolder;
+}
+#navbar ul li a:hover {
+    color: rgb(112, 11, 116); /* Color de fondo al pasar el ratón */
+}
+
+#navbar ul li h1 {
+    margin: 0;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px 16px;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+}
+
+#navbar ul li.cerrar {
+    float: right; /* Alinea este elemento a la derecha */
+}
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.title {
+    font-size: 28px;
+    color: #009ce4;
+    margin-bottom: 20px;
+}
+
+.content {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    margin-bottom: 20px;
+}
+
+.buttons a, .buttons button {
+    text-decoration: none;
+    background-color: #009ce4;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.buttons button:hover, .buttons a:hover {
+    background-color: #0077cc;
+}
+
+@media (max-width: 600px) {
+    .title {
+        font-size: 24px;
+    }
+    .content {
+        font-size: 18px;
+    }
+}

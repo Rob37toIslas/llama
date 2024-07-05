@@ -1,0 +1,53 @@
+$def with (respuesta,imagen)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/respuesta.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="navbar">
+        <ul>
+            <li>
+                <h1>AURORA REHAB</h1>
+            </li>
+            <li><a href="/dashboard">Inicio</a></li>
+            <li><a href="#news">Perfil</a></li>
+            <li class="cerrar"><a id="cerrar" title="cerrar secion"><i class="fa-solid fa-power-off" style="font-size: 20px;"></i></a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <h1 class="title">Respuesta</h1>
+        <img id="imagen" src="" alt="Imagen cargada desde Base64">
+        <p class="content">$respuesta</p>
+        <div class="buttons">
+            <a href="/"><i class="fa-solid fa-arrow-rotate-left" style="color: #ffffff;"></i> Volver</a>
+            <button onclick="location.reload();"><i  class="fa-solid fa-arrows-rotate fa-spin" style="color: #ffffff;"></i> Generar otra respuesta</button>
+            <button  class="button"><i class="fa-solid fa-floppy-disk" style="color: white;"></i> Guardar</button>
+        </div>
+    </div>
+</body>
+<script src="https://kit.fontawesome.com/eb759c438a.js" crossorigin="anonymous"></script>
+<script>console.log(`$imagen`)
+        var img = new Image();
+        img.src = base64Image;
+        var imgElement = document.getElementById('imagen');
+        
+        // Asigna la cadena Base64 como la fuente de la imagen
+        imgElement.src = base64Image;
+
+    </script>
+</html>
+
+<!-- <html>
+<head>
+    <title>Respuesta</title>
+</head>
+<body>
+    <h1>Respuesta</h1>
+    <p>$respuesta</p>
+    <a href="/">Volver</a>
+</body>
+</html> -->

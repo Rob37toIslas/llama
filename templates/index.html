@@ -1,0 +1,95 @@
+$def with ()
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/stylelienzo.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Aurora Rehab</title>
+</head>
+<body>
+    
+<div id="navbar">
+    <ul>
+        <li><a href="#home">Inicio</a></li>
+        <li><a href="#news">Noticias</a></li>
+        <li><a href="#contact">Contacto</a></li>
+        <li><a href="#about">Acerca de</a></li>
+    </ul>
+</div>
+<div class="buttons-container-top">
+    <button id="subir_img"title="subir imagen" onclick=openModaldos()><i style="font-size: 20px;" class="fa-solid fa-upload fa-fade"></i></button>
+    <button id="copiar" title="Copiar" onclick=Copy()><i class="fa-regular fa-copy"></i></button>
+    <button id="pegar" title="Pegar" onclick=Paste()><i class="fa-sharp fa-regular fa-paste"></i></button>
+    <button id="cortar" title="Cortar" onclick=Cut()><i class="fa-solid fa-scissors"></i></button>
+</div>
+<div id="container">
+    <div class="buttons-container-left">
+        <button id="pincel" title="Pincel"><i class="fa-solid fa-pencil"></i></button>
+        <button id="cuadrado" title="Dibujar cuadrado"><span class="material-symbols-outlined">square</span></button>
+        <button id="triangulo" title="Dibujar triángulo"><span class="material-symbols-outlined">change_history</span></button>
+        <button id="circulo" title="Dibujar círculo"><i class="fa-regular fa-circle"></i></button>
+        <div class="color" title="Seleccionar color">
+            <div class="file-img2">
+                <p><i id="paleta" style="font-size:25px;" class="fa-solid fa-palette"></i></p>
+            </div>
+            <input type="color" id="color" class="cargarimg">
+        </div>
+    </div>
+
+    <div id="canvas-container">
+        <canvas id="canvas"></canvas>
+    </div>
+
+    <div class="buttons-container-right">
+        <button id="goma" title="Goma"><i class="fa-solid fa-eraser"></i></button>
+        <button id="revertir" title="Revertir borrado"><i class="fa-solid fa-stamp"></i></button>
+        <button id="Eliminar" title="Eliminar" onclick=eliminar()><i class="fa fa-trash-o" ></i></button>
+        <button id="limpiar" title="Limpiar"><span class="material-symbols-outlined">format_paint</span></button>
+        <button onclick=openModal() title="Guardar"><span class="material-symbols-outlined">save</span></button>    
+    </div>
+</div>
+
+<div id="modal">
+    <div id="modalContent">
+        <span id="close">X</span>
+            <p class="file-img"><i class="fa-sharp fa-solid fa-file-export fa-beat-fade"></i></p>
+        <label>Ingresa el nombre de tu imagen:</label>
+        <input id="img-name" type="text" required>
+        <button id="save">Guardar</button>
+    </div>
+</div>
+
+<div id="modal_2">
+  
+   
+    <div id="modalContent">
+        <span id="close_modal2">X</span>
+        <p class="file-img"><i class="fa-regular fa-image fa-bounce"></i></p>
+        <div id="drop_zone">
+        <label>Arrastra tu imagen aqui o Selecciona una imagen de tu galería</label>
+        <div id="fileInfo"></div>
+        <button id="examinar" type="button">Examinar</button>
+        </div>
+        <form id="form" method="POST" enctype="multipart/form-data" action="/upload">
+        <input type="file" id="fileInput" name="myfile"  accept=".jpg" required style="display: none;"  >
+        <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+
+</div>
+
+
+
+
+
+<script src="/static/js/fabric.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://kit.fontawesome.com/eb759c438a.js" crossorigin="anonymous"></script>
+<script src="/static/js/lienzo.js"></script>
+<script src="/static/js/modals.js"></script>
+
+</body>
+</html>
