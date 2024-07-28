@@ -20,7 +20,9 @@ $def with (respuesta,imagen)
     </div>
     <div class="container">
         <h1 class="title">Respuesta</h1>
-        <img id="imagen" src="" alt="Imagen cargada desde Base64">
+        <center>
+            <img src="../uploads/dibujo-1.jpg" width="40%">
+        </center>
         <p class="content">$respuesta</p>
         <div class="buttons">
             <a href="/"><i class="fa-solid fa-arrow-rotate-left" style="color: #ffffff;"></i> Volver</a>
@@ -30,24 +32,6 @@ $def with (respuesta,imagen)
     </div>
 </body>
 <script src="https://kit.fontawesome.com/eb759c438a.js" crossorigin="anonymous"></script>
-<script>console.log(`$imagen`)
-        var img = new Image();
-        img.src = base64Image;
-        var imgElement = document.getElementById('imagen');
-        
-        // Asigna la cadena Base64 como la fuente de la imagen
-        imgElement.src = base64Image;
 
-    </script>
 </html>
 
-<!-- <html>
-<head>
-    <title>Respuesta</title>
-</head>
-<body>
-    <h1>Respuesta</h1>
-    <p>$respuesta</p>
-    <a href="/">Volver</a>
-</body>
-</html> -->

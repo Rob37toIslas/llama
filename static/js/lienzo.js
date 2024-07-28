@@ -1,6 +1,6 @@
 
 const canvas = new fabric.Canvas("canvas", {
-    width: 1200,
+  width: 1100,
     height: 450,
     backgroundColor: "#fff",
     erasable: false,
