@@ -6,7 +6,7 @@ url: str = "https://qpmehpmdyqbrfcltdlvs.supabase.co"
 key: str = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFwbWVocG1keXFicmZjbHRkbHZzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTY2Nzk3NzQsImV4cCI6MjAzMjI1NTc3NH0.X5t2joTAF-7MtIsgncKChhcb_o-tl4gRLwvzJjaiQqI"
 supabase: Client = create_client(url, key)
 
-model = "psicologo"
+model = "gemma2"
 
 def chat(messages):
     prompt = "Proporciona una respuesta corta y detallada:\n"
